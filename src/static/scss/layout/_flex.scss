@@ -1,0 +1,38 @@
+.qm-flex {
+
+  $display-list: 'flex', 'inline-flex';
+
+  @each $display in $display-list {
+      &.display-#{$display} {
+          display: #{$display};
+      }
+  }
+
+  $justify-content-list: 'flex-start', 'flex-end', 'space-between', 'space-around', 'center', 'normal';
+
+  @each $justify-content in $justify-content-list {
+      &.justify-content-#{$justify-content} {
+          justify-content: #{$justify-content};
+      }
+  }
+
+  $align-items-list: 'flex-start', 'flex-end', 'center', 'stretch', 'normal', 'baseline';
+
+  @each $align in $align-items-list {
+      &.align-items-#{$align} {
+          align-items: #{$align};
+      }
+  }
+
+  $flex-direction-list: 'row', 'row-reverse','column','column-reverse';
+
+  @each $direction in $flex-direction-list {
+      &.flex-direction-#{$direction} {
+          flex-direction: #{$direction};
+      }
+  }
+
+  &.flex-wrap {
+      flex-wrap: wrap;
+  }
+}

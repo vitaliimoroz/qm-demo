@@ -1,0 +1,10 @@
+$ac-spacing-directions: (top, right, bottom, left);
+$ac-spacing-sizes: (sm: 0.5rem, md: 1rem, lg: 1.5rem);
+
+@each $direction in $ac-spacing-directions {
+  @each $size, $value in $ac-spacing-sizes {
+    .qm-spacing-#{$direction}-#{$size} {
+      margin-#{$direction}: $value
+    }
+  }
+}
